@@ -21,7 +21,7 @@ Follow these steps to install and run the application:
 ## **1. Clone the Repository**
 ```bash
 
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/Hoffman3/Flask-Office-Supply-Data.git
 ```
 ## **2. Locate the project files in:**
 ```bash
@@ -30,14 +30,14 @@ git clone https://github.com/your-username/your-repository-name.git
 
 ## **3. Run the following command to install required Python libraries:**
 ```bash
-pip install -r requirements.txt
+pip install flask pandas
 ```
 ## **4. Start the Flask application by running:**
 
 ```bash
 python app.py
 
-Or by using pycharm navigate to the start button at the top or bottom right
+Or by using pycharm or your specific IDE navigate to the start button at the top or bottom right
 ```
 ### **5. Navigate to the pre development website**
 ```
