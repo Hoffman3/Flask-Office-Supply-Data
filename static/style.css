@@ -1,0 +1,165 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a universal font and color scheme */
+body {
+    background-color: #f4f4f9; /* Soft background color */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    color: #333; /* Dark grey text color for good readability */
+    line-height: 1.6;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Add a container with padding, centered content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+    margin: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #5c6bc0; /* Calm blue color */
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Subheadings */
+h2 {
+    color: #555; /* Slightly lighter grey for subheadings */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Links styling */
+a {
+    color: #5c6bc0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3949ab; /* Darker blue on hover */
+}
+
+/* Buttons */
+button {
+    background-color: #5c6bc0; /* Matching button color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3949ab; /* Darker shade of blue when hovered */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #5c6bc0;
+    outline: none;
+}
+
+/* Form labels */
+label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Flexbox container for centering content */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Card-style form or content boxes */
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 100%;
+    max-width: 600px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design: Stack elements on small screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        margin: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .card {
+        padding: 20px;
+    }
+}
