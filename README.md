@@ -13,22 +13,25 @@ This project is a Flask-based web application designed to analyze sales data fro
 - **Products with Negative Profit**: Highlight products that need attention.
 
 ---
+## **Pre-Instructions**
 
-## **Setup Instructions**
+First install Pycharm or a similar IDE
 
-Follow these steps to install and run the application:
+Then follow these instructions to install and run the application:
 
-## **1. Clone the Repository**
+## **Setup Instructions:**
+
+## **1. Clone the Repository:**
+locate the terminal on your IDE and copy and paste the following
 ```bash
-
 git clone https://github.com/Hoffman3/Flask-Office-Supply-Data.git
 ```
-## **2. Locate the project files in:**
+## **2. Locate the project:**
 ```bash
-/Users/"your-computer-name"/PycharmProjects/"project-name"/
+navigate to the top of your screen and click file > open > Flask-Office-Supply-Data click ok to open project
 ```
 
-## **3. Run the following command to install required Python libraries:**
+## **3. Run the following command using terminal to install required Python libraries:**
 ```bash
 pip install flask pandas
 ```
@@ -37,11 +40,12 @@ pip install flask pandas
 ```bash
 python app.py
 
+```
 Or by using pycharm or your specific IDE navigate to the start button at the top or bottom right
-```
-### **5. Navigate to the pre development website**
-```
+### **5. Navigate to the pre development website:**
 Open your web browser and go to:
 
-
+```
 http://127.0.0.1:5000
+```
+Or the web link should appear when your application is ran
