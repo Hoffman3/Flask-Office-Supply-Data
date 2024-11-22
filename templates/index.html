@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Query App</title>
+</head>
+<body>
+    <h1>Flask Query Application</h1>
+    <form method="POST">
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="">Select a category</option>
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="sub_category">Sub-Category:</label>
+        <select name="sub_category" id="sub_category">
+            <option value="">Select a sub-category</option>
+            {% for sub_category in sub_categories %}
+            <option value="{{ sub_category }}">{{ sub_category }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="region">Region:</label>
+        <select name="region" id="region">
+            <option value="">Select a region</option>
+            {% for region in regions %}
+            <option value="{{ region }}">{{ region }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="segment">Segment:</label>
+        <select name="segment" id="segment">
+            <option value="">Select a segment</option>
+            {% for segment in segments %}
+            <option value="{{ segment }}">{{ segment }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="query">Query:</label>
+        <select name="query" id="query">
+            <option value="">Select a query</option>
+            <option value="Total Sales and Profit">Total Sales and Profit</option>
+            <option value="Average Discount by Product">Average Discount by Product</option>
+            <option value="Total Sales by Year">Total Sales by Year</option>
+            <option value="Profit by Region">Profit by Region</option>
+            <option value="Products with Negative Profit">Products with Negative Profit</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if query_result %}
+    <h2>Query Result:</h2>
+    <div>{{ query_result | safe }}</div>
+    {% endif %}
+</body>
+</html>

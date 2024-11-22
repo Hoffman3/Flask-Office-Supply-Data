@@ -1,0 +1,6 @@
+Flask Query Application
+This project is a flask based web application that analyzes the sales data from the "TableauSalesData.csv" file and allows users to perform queries on the dataset and display quick and easy to understand information about the office supply company business.
+Some features include queries to understand total sales and profit, average discount by product, total sales by year, profit by region, and products with negative profit.
+To install the files neccessary to run the program launch Pycharm then go to file > new project and choose a name for example "My_Flask_App" locate the project files in your by going to "/Users/"computer name"/PycharmProjects/"name of project/" then put the files from github into the project.
+Once you have finished these steps run the app and go to the website "http://127.0.0.1:5000" this is your personal development server and will not work for others untill published as a production server.
+The website should be fully functional allowing full access to the data analysis.
