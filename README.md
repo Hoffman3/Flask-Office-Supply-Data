@@ -39,7 +39,6 @@ python -m venv venv
 ```
 Windows:
 ```
-
 venv\Scripts\activate
 ```
 MacOS
