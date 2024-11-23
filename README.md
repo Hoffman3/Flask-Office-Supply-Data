@@ -33,9 +33,23 @@ locate the terminal on your IDE and copy and paste the following then add files 
 ```bash
 git clone https://github.com/Hoffman3/Flask-Office-Supply-Data.git
 ```
+## **3.Create and activate virutal environment:**
+```bash
+python -m venv venv
+```
+Windows:
+```
+
+venv\Scripts\activate
+```
+MacOS
+```
+source venv/bin/activate
+```
+
 ## **3. Run the following command using terminal to install required Python libraries:**
 ```bash
-pip install flask pandas
+pip install -r requirements.txt
 ```
 ## **4. Start the Flask application by running:**
 
@@ -44,7 +58,7 @@ python app.py
 
 ```
 Or by using pycharm or your specific IDE navigate to the start button at the top or bottom right
-### **5. Navigate to the pre development website:**
+## **5. Navigate to the pre development website:**
 You should see an output with the pre development server below (this website is only available to you after running the application):
 
 ```
