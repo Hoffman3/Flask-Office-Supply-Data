@@ -14,7 +14,8 @@ if not os.path.exists(data_path):
 # Load the dataset
 try:
     df = pd.read_csv(data_path)
-    df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%Y', errors='coerce')  # Specifying the date format
+    # Parse the 'Order Date' column with the correct format
+    df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%y', errors='coerce')
     df['Year'] = df['Order Date'].dt.year
 except Exception as e:
     raise ValueError(f"An error occurred while reading the data: {str(e)}")
@@ -82,5 +83,5 @@ def index():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True) 
+    app.run(debug=True)
 
