@@ -12,9 +12,12 @@ if not os.path.exists(data_path):
     raise FileNotFoundError(f"The file was not found: {data_path}")
 
 # Load the dataset
-df = pd.read_csv(data_path)
-df['Order Date'] = pd.to_datetime(df['Order Date'], errors='coerce')
-df['Year'] = df['Order Date'].dt.year
+try:
+    df = pd.read_csv(data_path)
+    df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%Y', errors='coerce')  # Specifying the date format
+    df['Year'] = df['Order Date'].dt.year
+except Exception as e:
+    raise ValueError(f"An error occurred while reading the data: {str(e)}")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -34,8 +37,14 @@ def index():
         segment = request.form.get("segment")
         query = request.form.get("query")
 
+        # Sanitize inputs
+        category = category if category in categories else None
+        sub_category = sub_category if sub_category in sub_categories else None
+        region = region if region in regions else None
+        segment = segment if segment in segments else None
+
         # Filter data based on inputs
-        filtered_df = df
+        filtered_df = df.copy()
         if category:
             filtered_df = filtered_df[filtered_df['Category'] == category]
         if sub_category:
@@ -73,4 +82,5 @@ def index():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
+
