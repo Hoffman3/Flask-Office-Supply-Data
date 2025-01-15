@@ -12,28 +12,26 @@ This project is a Flask-based web application designed to analyze sales data fro
 - **Profit by Region**: Understand which regions perform the best.
 - **Products with Negative Profit**: Highlight products that need attention.
 
+## **Prerequisites**
+
+- **Python 3.8 or higher
+- **Flask
+- **A suitable IDE (e.g., PyCharm, VS Code)
 ---
-## **Pre-Instructions**
-
-First install Pycharm or a similar IDE
-
-(I recommend using Flask when creating your project or utilize clone from repository)
-
-Then follow these instructions to install and run the application:
-
 ## **Setup Instructions:**
 
-## **1. Clone git repository to IDE:**
-When using PyCharm Navigate to clone repository and copy and paste the github URL below or in your search bar, for other IDE's search for similar clone repositories using git or utilize the terminal with the code in the second instructions.
+## **1. Clone Repository using Pycharm:**
+- Using PyCharm: Navigate to "Clone Repository" then paste the URL, and clone the repository.
 ```bash
 https://github.com/Hoffman3/Flask-Office-Supply-Data.git
 ```
+
 ## **2. Clone the Repository using terminal:**
 locate the terminal on your IDE and copy and paste the following then add files to main project directory
 ```bash
 git clone https://github.com/Hoffman3/Flask-Office-Supply-Data.git
 ```
-## **3.Create and activate virutal environment:**
+## **3. Create and activate virtual environment:**
 ```bash
 python -m venv venv
 ```
@@ -46,7 +44,7 @@ MacOS
 source venv/bin/activate
 ```
 
-## **3. Run the following command using terminal to install required Python libraries:**
+## **3. Install dependencies with the command below:**
 ```bash
 pip install -r requirements.txt
 ```
@@ -63,4 +61,6 @@ You should see an output with the pre development server below (this website is 
 ```
 http://127.0.0.1:5000
 ```
+
+
 
