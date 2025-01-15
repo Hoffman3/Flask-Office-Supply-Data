@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Universal font and color scheme */
+/* font and color */
 body {
     background-color: #f4f4f9; /* Soft background color */
     font-family: 'Arial', sans-serif; /* Clean and modern font */
@@ -19,7 +19,7 @@ body {
     min-height: 100vh; /* Full viewport height */
 }
 
-/* Container with centered content and padding */
+/* Container with centered content */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -60,7 +60,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Links styling */
+/* Link styling */
 a {
     color: #5c6bc0;
     text-decoration: none;
@@ -94,7 +94,7 @@ button:focus {
     box-shadow: 0 0 0 2px #5c6bc0; /* Focus outline */
 }
 
-/* Input fields */
+/* Input */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -119,7 +119,7 @@ select:focus {
     outline: none;
 }
 
-/* Form labels */
+/* labels */
 label {
     font-weight: bold;
     color: #444;
@@ -153,7 +153,6 @@ label {
     margin-bottom: 20px;
 }
 
-/* Enhancements for responsive design */
 @media (max-width: 768px) {
     body {
         padding: 20px;
