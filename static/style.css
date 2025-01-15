@@ -1,11 +1,9 @@
-/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* font and color */
 body {
     background-color: #f4f4f9; /* Soft background color */
     font-family: 'Arial', sans-serif; /* Clean and modern font */
@@ -19,7 +17,6 @@ body {
     min-height: 100vh; /* Full viewport height */
 }
 
-/* Container with centered content */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -31,7 +28,7 @@ body {
     text-align: center; /* Center the content */
 }
 
-/* Header styles */
+/* Header */
 header {
     text-align: center;
     margin-bottom: 10px; /* Reduced margin for better spacing */
@@ -128,7 +125,6 @@ label {
     font-size: 20px; /* Increased font size for better readability */
 }
 
-/* Centering content with Flexbox */
 .center-content {
     display: flex;
     justify-content: center;
@@ -136,7 +132,6 @@ label {
     height: 100vh; /* Full viewport height */
 }
 
-/* Card-style form or content boxes */
 .card {
     background-color: #ffffff;
     padding: 30px;
