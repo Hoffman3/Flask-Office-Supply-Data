@@ -4,17 +4,13 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Path to the CSV file relative to the project directory
 data_path = os.path.join(os.path.dirname(__file__), 'data', 'TableauSalesData.csv')
 
-# Check if the file exists before proceeding
 if not os.path.exists(data_path):
     raise FileNotFoundError(f"The file was not found: {data_path}")
 
-# Load the dataset
 try:
     df = pd.read_csv(data_path)
-    # Parse the 'Order Date' column with the correct format
     df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%y', errors='coerce')
     df['Year'] = df['Order Date'].dt.year
 except Exception as e:
@@ -31,20 +27,17 @@ def index():
     segments = df['Segment'].dropna().unique()
 
     if request.method == "POST":
-        # Retrieve form inputs
         category = request.form.get("category")
         sub_category = request.form.get("sub_category")
         region = request.form.get("region")
         segment = request.form.get("segment")
         query = request.form.get("query")
 
-        # Sanitize inputs
         category = category if category in categories else None
         sub_category = sub_category if sub_category in sub_categories else None
         region = region if region in regions else None
         segment = segment if segment in segments else None
 
-        # Filter data based on inputs
         filtered_df = df.copy()
         if category:
             filtered_df = filtered_df[filtered_df['Category'] == category]
@@ -55,7 +48,6 @@ def index():
         if segment:
             filtered_df = filtered_df[filtered_df['Segment'] == segment]
 
-        # Perform the selected query
         if query == "Total Sales and Profit":
             total_sales = filtered_df['Sales'].sum()
             total_profit = filtered_df['Profit'].sum()
