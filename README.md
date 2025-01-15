@@ -14,9 +14,9 @@ This project is a Flask-based web application designed to analyze sales data fro
 
 ## **Prerequisites**
 
-- **Python 3.8 or higher
-- **Flask
-- **A suitable IDE (e.g., PyCharm, VS Code)
+- Python 3.8 or higher
+- Flask
+- A suitable IDE (e.g., PyCharm, VS Code)
 ---
 ## **Setup Instructions:**
 
