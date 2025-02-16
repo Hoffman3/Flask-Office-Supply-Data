@@ -1,3 +1,6 @@
+![Dashboard Preview](images/website_image.png)
+
+
 # **Flask Query Application**
 
 This project is a Flask-based web application designed to analyze sales data from the **`TableauSalesData.csv`** file. It allows users to perform queries on the dataset and provides quick, easy-to-understand insights into the office supply company's business performance.

@@ -1,63 +1,92 @@
+/*
+Global Reset: Removes default margins and paddings to ensure consistency across browsers.
+Box-sizing set to border-box ensures padding and borders are included in element width calculations.
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*
+Body Styling:
+- Uses a soft background for a modern look.
+- Centers content both vertically and horizontally for better UX.
+- Provides a clean, readable font and optimal line height.
+*/
 body {
-    background-color: #f4f4f9; /* Soft background color */
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
-    color: #333; /* Dark grey text color for good readability */
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
 }
 
+/*
+Container:
+- Ensures a structured layout with a max width for readability.
+- Adds spacing, a subtle shadow for depth, and text alignment for a balanced UI.
+*/
 .container {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    text-align: center; /* Center the content */
+    text-align: center;
 }
 
-/* Header */
+/*
+Header:
+- Centers the title and adds appropriate spacing for clarity.
+*/
 header {
     text-align: center;
-    margin-bottom: 10px; /* Reduced margin for better spacing */
+    margin-bottom: 10px;
 }
 
 header h1 {
-    color: #5c6bc0; /* Calm blue color */
-    font-size: 48px; /* Increased font size for the title */
+    color: #5c6bc0;
+    font-size: 48px;
     letter-spacing: 1px;
     font-weight: bold;
-    margin-bottom: 10px; /* Added more margin for better spacing */
+    margin-bottom: 10px;
 }
 
-/* Subheadings */
+/*
+Subheadings:
+- Lighter gray for better contrast.
+- Slightly increased font size for improved readability.
+*/
 h2 {
-    color: #555; /* Slightly lighter grey for subheadings */
-    font-size: 32px; /* Increased font size */
+    color: #555;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-/* Paragraph styles */
+/*
+Paragraph Styling:
+- Adjusts font size and line height for better readability.
+*/
 p {
-    font-size: 18px; /* Slightly increased font size */
+    font-size: 18px;
     color: #666;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* Link styling */
+/*
+Link Styling:
+- Default color matches the theme.
+- Transition effect for a smooth hover experience.
+*/
 a {
     color: #5c6bc0;
     text-decoration: none;
@@ -65,16 +94,20 @@ a {
 }
 
 a:hover {
-    color: #3949ab; /* Darker blue on hover */
+    color: #3949ab;
 }
 
-/* Buttons */
+/*
+Buttons:
+- Consistent styling with primary color.
+- Enlarges slightly on hover for better user interaction.
+*/
 button {
-    background-color: #5c6bc0; /* Light blue color */
+    background-color: #5c6bc0;
     color: #ffffff;
-    font-size: 18px; /* Increased font size */
+    font-size: 18px;
     border: none;
-    padding: 14px 30px; /* Increased padding */
+    padding: 14px 30px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -82,24 +115,28 @@ button {
 }
 
 button:hover {
-    background-color: #3949ab; /* Darker shade of blue on hover */
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    background-color: #3949ab;
+    transform: scale(1.1);
 }
 
 button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #5c6bc0; /* Focus outline */
+    box-shadow: 0 0 0 2px #5c6bc0;
 }
 
-/* Input */
+/*
+Form Elements:
+- Uses a consistent design with increased padding and font size.
+- Smooth transition effect for user-friendly focus interaction.
+*/
 input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea,
 select {
     width: 100%;
-    padding: 14px; /* Slightly increased padding */
-    font-size: 18px; /* Increased font size */
+    padding: 14px;
+    font-size: 18px;
     border: 2px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -107,40 +144,50 @@ select {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
+input:focus,
 textarea:focus,
 select:focus {
     border-color: #5c6bc0;
     outline: none;
 }
 
-/* labels */
+/*
+Label Styling:
+- Increases font size for better form usability.
+*/
 label {
     font-weight: bold;
     color: #444;
     margin-bottom: 5px;
     display: block;
-    font-size: 20px; /* Increased font size for better readability */
+    font-size: 20px;
 }
 
+/*
+Center Content:
+- Used for aligning content in the center of the page.
+*/
 .center-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
+/*
+Card Components:
+- Provides a clean, organized section for displaying content.
+- Box shadow adds subtle depth for a professional look.
+*/
 .card {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
     margin: 20px;
-    text-align: left; /* Align text left within cards */
+    text-align: left;
 }
 
 .card h3 {
@@ -148,21 +195,30 @@ label {
     margin-bottom: 20px;
 }
 
+/*
+Responsive Design:
+- Ensures optimal layout on smaller screens.
+- Reduces font sizes and margins for mobile devices.
+*/
 @media (max-width: 768px) {
     body {
         padding: 20px;
     }
+
     .container {
         margin: 0;
         width: 100%;
         padding: 15px;
     }
+
     header h1 {
         font-size: 36px;
     }
+
     h2 {
         font-size: 28px;
     }
+
     .card {
         padding: 20px;
     }

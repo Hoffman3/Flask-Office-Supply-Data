@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Supplies Co Sales & Profit Analysis Dashboard</title>
 
-    <!-- Link to external CSS file -->
+    <!-- External CSS for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <script src="your_script.js" defer></script>
+    <!-- External JavaScript file (deferred for better page loading) -->
+    <script src="{{ url_for('static', filename='your_script.js') }}" defer></script>
 </head>
 <body>
     <div class="container">
+        <!-- Page Header -->
         <header>
             <h1>Office Supplies Co Sales & Profit Analysis Dashboard</h1>
         </header>
+
+        <!-- Filter Form -->
         <form method="POST" class="form-grid">
+            <!-- Category Selection -->
             <div class="form-group">
                 <label for="category">Category:</label>
-                <select name="category" id="category" aria-label="Category">
+                <select name="category" id="category" aria-label="Select Category">
                     <option value="">Select a category</option>
                     {% for category in categories %}
                     <option value="{{ category }}">{{ category }}</option>
@@ -26,9 +31,10 @@
                 </select>
             </div>
 
+            <!-- Sub-Category Selection -->
             <div class="form-group">
                 <label for="sub_category">Sub-Category:</label>
-                <select name="sub_category" id="sub_category" aria-label="Sub-Category">
+                <select name="sub_category" id="sub_category" aria-label="Select Sub-Category">
                     <option value="">Select a sub-category</option>
                     {% for sub_category in sub_categories %}
                     <option value="{{ sub_category }}">{{ sub_category }}</option>
@@ -36,9 +42,10 @@
                 </select>
             </div>
 
+            <!-- Region Selection -->
             <div class="form-group">
                 <label for="region">Region:</label>
-                <select name="region" id="region" aria-label="Region">
+                <select name="region" id="region" aria-label="Select Region">
                     <option value="">Select a region</option>
                     {% for region in regions %}
                     <option value="{{ region }}">{{ region }}</option>
@@ -46,9 +53,10 @@
                 </select>
             </div>
 
+            <!-- Segment Selection -->
             <div class="form-group">
                 <label for="segment">Segment:</label>
-                <select name="segment" id="segment" aria-label="Segment">
+                <select name="segment" id="segment" aria-label="Select Segment">
                     <option value="">Select a segment</option>
                     {% for segment in segments %}
                     <option value="{{ segment }}">{{ segment }}</option>
@@ -56,9 +64,10 @@
                 </select>
             </div>
 
+            <!-- Query Selection -->
             <div class="form-group">
                 <label for="query">Query:</label>
-                <select name="query" id="query" aria-label="Query">
+                <select name="query" id="query" aria-label="Select Query">
                     <option value="">Select a query</option>
                     <option value="Total Sales and Profit">Total Sales and Profit</option>
                     <option value="Average Discount by Product">Average Discount by Product</option>
@@ -68,11 +77,13 @@
                 </select>
             </div>
 
+            <!-- Submit Button -->
             <div class="form-group">
-                <button type="submit" aria-label="Submit">Submit</button>
+                <button type="submit" aria-label="Submit Query">Submit</button>
             </div>
         </form>
 
+        <!-- Query Result Section (Only displays if results are available) -->
         {% if query_result %}
         <section class="results">
             <h2>Query Result:</h2>
@@ -80,6 +91,5 @@
         </section>
         {% endif %}
     </div>
-
 </body>
 </html>
