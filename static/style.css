@@ -1,19 +1,11 @@
-/*
-Global Reset: Removes default margins and paddings to ensure consistency across browsers.
-Box-sizing set to border-box ensures padding and borders are included in element width calculations.
-*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*
-Body Styling:
-- Uses a soft background for a modern look.
-- Centers content both vertically and horizontally for better UX.
-- Provides a clean, readable font and optimal line height.
-*/
+
 body {
     background-color: #f4f4f9;
     font-family: 'Arial', sans-serif;
@@ -27,11 +19,6 @@ body {
     min-height: 100vh;
 }
 
-/*
-Container:
-- Ensures a structured layout with a max width for readability.
-- Adds spacing, a subtle shadow for depth, and text alignment for a balanced UI.
-*/
 .container {
     width: 100%;
     max-width: 1200px;
@@ -43,10 +30,7 @@ Container:
     text-align: center;
 }
 
-/*
-Header:
-- Centers the title and adds appropriate spacing for clarity.
-*/
+
 header {
     text-align: center;
     margin-bottom: 10px;
@@ -60,21 +44,14 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/*
-Subheadings:
-- Lighter gray for better contrast.
-- Slightly increased font size for improved readability.
-*/
+
 h2 {
     color: #555;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
-/*
-Paragraph Styling:
-- Adjusts font size and line height for better readability.
-*/
+
 p {
     font-size: 18px;
     color: #666;
@@ -82,11 +59,7 @@ p {
     margin-bottom: 20px;
 }
 
-/*
-Link Styling:
-- Default color matches the theme.
-- Transition effect for a smooth hover experience.
-*/
+
 a {
     color: #5c6bc0;
     text-decoration: none;
@@ -99,9 +72,8 @@ a:hover {
 
 /*
 Buttons:
-- Consistent styling with primary color.
-- Enlarges slightly on hover for better user interaction.
 */
+
 button {
     background-color: #5c6bc0;
     color: #ffffff;
@@ -124,11 +96,6 @@ button:focus {
     box-shadow: 0 0 0 2px #5c6bc0;
 }
 
-/*
-Form Elements:
-- Uses a consistent design with increased padding and font size.
-- Smooth transition effect for user-friendly focus interaction.
-*/
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -151,10 +118,6 @@ select:focus {
     outline: none;
 }
 
-/*
-Label Styling:
-- Increases font size for better form usability.
-*/
 label {
     font-weight: bold;
     color: #444;
@@ -163,10 +126,6 @@ label {
     font-size: 20px;
 }
 
-/*
-Center Content:
-- Used for aligning content in the center of the page.
-*/
 .center-content {
     display: flex;
     justify-content: center;
@@ -174,11 +133,7 @@ Center Content:
     height: 100vh;
 }
 
-/*
-Card Components:
-- Provides a clean, organized section for displaying content.
-- Box shadow adds subtle depth for a professional look.
-*/
+
 .card {
     background-color: #ffffff;
     padding: 30px;
@@ -195,11 +150,6 @@ Card Components:
     margin-bottom: 20px;
 }
 
-/*
-Responsive Design:
-- Ensures optimal layout on smaller screens.
-- Reduces font sizes and margins for mobile devices.
-*/
 @media (max-width: 768px) {
     body {
         padding: 20px;
