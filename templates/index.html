@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Supplies Co Sales & Profit Analysis Dashboard</title>
 
-    <!-- External CSS for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <!-- External JavaScript file (deferred for better page loading) -->
     <script src="{{ url_for('static', filename='your_script.js') }}" defer></script>
 </head>
 <body>
     <div class="container">
-        <!-- Page Header -->
         <header>
             <h1>Office Supplies Co Sales & Profit Analysis Dashboard</h1>
         </header>
 
-        <!-- Filter Form -->
         <form method="POST" class="form-grid">
-            <!-- Category Selection -->
             <div class="form-group">
                 <label for="category">Category:</label>
                 <select name="category" id="category" aria-label="Select Category">
@@ -31,7 +26,6 @@
                 </select>
             </div>
 
-            <!-- Sub-Category Selection -->
             <div class="form-group">
                 <label for="sub_category">Sub-Category:</label>
                 <select name="sub_category" id="sub_category" aria-label="Select Sub-Category">
@@ -42,7 +36,6 @@
                 </select>
             </div>
 
-            <!-- Region Selection -->
             <div class="form-group">
                 <label for="region">Region:</label>
                 <select name="region" id="region" aria-label="Select Region">
@@ -53,7 +46,6 @@
                 </select>
             </div>
 
-            <!-- Segment Selection -->
             <div class="form-group">
                 <label for="segment">Segment:</label>
                 <select name="segment" id="segment" aria-label="Select Segment">
@@ -64,7 +56,6 @@
                 </select>
             </div>
 
-            <!-- Query Selection -->
             <div class="form-group">
                 <label for="query">Query:</label>
                 <select name="query" id="query" aria-label="Select Query">
@@ -77,13 +68,11 @@
                 </select>
             </div>
 
-            <!-- Submit Button -->
             <div class="form-group">
                 <button type="submit" aria-label="Submit Query">Submit</button>
             </div>
         </form>
 
-        <!-- Query Result Section (Only displays if results are available) -->
         {% if query_result %}
         <section class="results">
             <h2>Query Result:</h2>
