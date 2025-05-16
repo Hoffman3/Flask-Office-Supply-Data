@@ -4,15 +4,13 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Define path to the dataset
 data_path = os.path.join(os.path.dirname(__file__), 'data', 'TableauSalesData.csv')
 
-# Ensure the dataset exists before proceeding
+# check if the dataset exists
 if not os.path.exists(data_path):
     raise FileNotFoundError(f"Dataset not found: {data_path}")
 
 try:
-    # Load dataset and preprocess date column
     df = pd.read_csv(data_path)
     df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%y', errors='coerce')
     df['Year'] = df['Order Date'].dt.year  # Extract year for analysis
@@ -24,29 +22,27 @@ except Exception as e:
 def index():
     """Handles the main page rendering and query processing."""
 
-    query_result = None  # Stores the query result to be displayed
+    query_result = None 
 
-    # Unique dropdown options extracted from dataset
+  
     categories = sorted(df['Category'].dropna().unique())  # Sorted for better UX
     sub_categories = sorted(df['Sub-Category'].dropna().unique())
     regions = sorted(df['Region'].dropna().unique())
     segments = sorted(df['Segment'].dropna().unique())
 
     if request.method == "POST":
-        # Retrieve form inputs
+    
         category = request.form.get("category")
         sub_category = request.form.get("sub_category")
         region = request.form.get("region")
         segment = request.form.get("segment")
         query = request.form.get("query")
 
-        # Validate inputs against available options
         category = category if category in categories else None
         sub_category = sub_category if sub_category in sub_categories else None
         region = region if region in regions else None
         segment = segment if segment in segments else None
 
-        # Apply filters dynamically based on user selection
         filtered_df = df.copy()
         filters = {
             'Category': category,
@@ -59,7 +55,7 @@ def index():
             if value:
                 filtered_df = filtered_df[filtered_df[column] == value]
 
-        # Handle query selection
+        # query selection
         if query == "Total Sales and Profit":
             total_sales = filtered_df['Sales'].sum()
             total_profit = filtered_df['Profit'].sum()
@@ -81,7 +77,6 @@ def index():
             negative_profit = filtered_df[filtered_df['Profit'] < 0][['Product Name', 'Profit']]
             query_result = negative_profit.to_html(index=False)
 
-    # Render template with necessary data
     return render_template(
         "index.html",
         categories=categories,
