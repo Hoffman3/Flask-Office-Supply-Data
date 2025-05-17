@@ -13,7 +13,7 @@ if not os.path.exists(data_path):
 try:
     df = pd.read_csv(data_path)
     df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%y', errors='coerce')
-    df['Year'] = df['Order Date'].dt.year  # Extract year for analysis
+    df['Year'] = df['Order Date'].dt.year  
 except Exception as e:
     raise ValueError(f"Error reading dataset: {str(e)}")
 
@@ -25,7 +25,7 @@ def index():
     query_result = None 
 
   
-    categories = sorted(df['Category'].dropna().unique())  # Sorted for better UX
+    categories = sorted(df['Category'].dropna().unique())  
     sub_categories = sorted(df['Sub-Category'].dropna().unique())
     regions = sorted(df['Region'].dropna().unique())
     segments = sorted(df['Segment'].dropna().unique())
